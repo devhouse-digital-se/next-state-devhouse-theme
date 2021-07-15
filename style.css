@@ -1014,6 +1014,10 @@ html {
 	html {
 		font-size: 14px;
 	}	
+	
+	.container {
+	    max-width: 768px;
+	}
 }
 
 @media screen and (min-width: 992px) {
@@ -1021,6 +1025,7 @@ html {
 		font-size: 16px;
 	}
 }
+
 
 /* margin classes - sections*/
 .m-100 {
@@ -1494,10 +1499,6 @@ html {
 	padding-left: 0;
 	list-style-type: none;
 	margin: 0;
-	/* two columns*/
-	columns: 2;
-	-webkit-columns: 2;
-	-moz-columns: 2;
 }
 
 .footer-menu a {
@@ -1561,6 +1562,13 @@ html {
 }
 
 @media screen and (min-width:992px) {
+	
+	.footer-menu ul {
+		/* two columns*/
+		columns: 2;
+		-webkit-columns: 2;
+		-moz-columns: 2;
+	}
 	
 	.footer-menu li {
 		padding-left: 20%;
