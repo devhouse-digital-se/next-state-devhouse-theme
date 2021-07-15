@@ -12,7 +12,7 @@
 		return;
 	}
 
-	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
+	const button = document.getElementById( 'nav-icon4' );
 
 	// Return early if the button don't exist.
 	if ( 'undefined' === typeof button ) {
@@ -34,6 +34,7 @@
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
+		button.classList.toggle( 'open' );
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
