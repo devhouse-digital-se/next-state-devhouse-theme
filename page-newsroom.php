@@ -17,7 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php get_template_part( 'template-parts/home-hero' ); ?>
+		<?php get_template_part( 'template-parts/page-hero' ); ?>
 		
 		<!-- post grid -->
 		<div class="container-fluid post-grid">

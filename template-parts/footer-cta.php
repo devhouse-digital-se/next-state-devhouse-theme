@@ -27,7 +27,7 @@
 	        		// if cta with image
 	        		else : ?>
 	        		 
-		        		<div class="col-12 footer-cta__content cta-contains-image">
+		        		<div class="col footer-cta__content cta-contains-image">
 		        			
 		        			<div class="row d-flex">
 		        				

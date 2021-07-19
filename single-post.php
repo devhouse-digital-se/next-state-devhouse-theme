@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<?php get_template_part( 'template-parts/page-hero' ); ?>
+	<?php get_template_part( 'template-parts/post-hero' ); ?>
 
 	<main id="primary" class="site-main">
 		
@@ -19,12 +19,16 @@ get_header();
 				
 				<section class="container m-100">
 					<div class="row">
+						
+						<div class="col-sm-12 col-md-8 m-auto">
+							
+							<?php
 
-					<?php
-					
-					echo get_the_content();
-					
-					?>
+								echo get_the_content();
+								
+							?>
+							
+						</div>
 					
 					</div>
 				</section>
