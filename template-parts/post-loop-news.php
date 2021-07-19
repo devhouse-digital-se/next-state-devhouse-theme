@@ -48,6 +48,8 @@ if ($query->have_posts()) :
 	
 endif;
 
+wp_reset_query();
+
 // if FacetWP is active and loop type is grid, enable pagination
 if (function_exists('facetwp_display') && $loop_type == 'grid') :
 	

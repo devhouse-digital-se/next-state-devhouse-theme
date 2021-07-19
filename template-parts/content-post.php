@@ -1,7 +1,7 @@
 <?php
 // variables
 $category = get_the_category()[0]->cat_name;
-$date = get_the_date( 'M d Y' );
+$date = get_the_date( 'F d Y' );
 
 ?>
 
@@ -18,7 +18,7 @@ $date = get_the_date( 'M d Y' );
 			<div class="entry-meta"><?php echo $category; ?> • <?php echo $date; ?></div>
 			
 			<a style="text-decoration: none;" href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>">
-				<div class="entry-title"><h3><?php echo get_the_title(); ?></h3></div>
+				<div class="entry-title"><h4><?php echo get_the_title(); ?></h4></div>
 			</a>
 			
 			<div class="entry-content">
