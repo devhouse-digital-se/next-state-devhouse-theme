@@ -1495,7 +1495,6 @@ html {
 	margin-top: 0;
 }
 
-.footer-meta .footer-about,
 .footer-meta p:last-of-type,
 .footer-contact p:last-of-type {
 	margin-bottom: 0;
@@ -1586,5 +1585,78 @@ html {
 		width: 38px;
 		height: 38px;
 	}
+
+}
+
+/* Post grid
+--------------------------------------------- */
+.post-grid .entry-thumbnail {
+	height: 0;
+	padding-bottom: 60.69%;
+}
+
+.post-grid article {
+	margin-bottom: 15px;
+}
+
+.post-grid article .article-wrapper {
+	height: 100%;
+	padding: 30px;
+	background-color: #EEF6FF; /* temp */
+}
+
+.post-grid article .entry-wrapper {
+	padding: 30px;
+}
+
+article .entry-title h3 {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.post-grid article .entry-meta {
+	margin-top: 30px;
+}
+
+article .entry-content {
+	margin-top: 0;
+}
+
+article .read-more {
+	margin-top: 25px;
+}
+
+/* FacetWP */
+.facetwp-pager {
+	text-align: center;
+	margin: 50px 0 100px 0;
+}
+
+.facetwp-pager > .facetwp-page {
+	font-size: 14px;
+	background-color: #EEF6FF;
+	color: #1E7BE2;
+	padding: 0;
+    height: 35px;
+    margin: 0 7.5px;
+    width: 35px;
+    line-height: 100%;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facetwp-pager > .facetwp-page.active {
+	background-color: #1E7BE2;
+	color: #EEF6FF;
+}
+
+@media screen and (min-width:768px) {
+	
+	.post-grid article {
+		margin-bottom: 30px;
+	}
+
 
 }
