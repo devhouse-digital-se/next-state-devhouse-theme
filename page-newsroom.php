@@ -19,26 +19,34 @@ get_header();
 
 		<?php get_template_part( 'template-parts/home-hero' ); ?>
 		
-		<!-- featured post -->
-		<div class="container-fluid featured-post">
-			<div class="row">
-				
-				<div class="container">
-							
-					<?php get_template_part( 'template-parts/post-loop-news', null, array('loop-type' => 'featured') ); ?>	
-
-				</div>
-				
-			</div>
-		</div><!-- .featured post-->
-		
 		<!-- post grid -->
 		<div class="container-fluid post-grid">
 			<div class="row">
 				
 				<div class="container">
+					
+					<?php
+					
+					// variables
+					$enable_fwp = false;
+					$posts_to_display = -1;
+					$featured_post = get_field('featured_post');
+					
+					// display featured post if applicable
+					if ($featured_post) :
+						
+						echo '<div class="featured-post row">';
+						
+							get_template_part( 'template-parts/content-post-featured');
+							
+						echo '</div>';
+						
+					endif;
 
-					<?php get_template_part( 'template-parts/post-loop-news', null, array('loop-type' => 'grid') ); ?>	
+					// display main post grid
+					get_template_part( 'template-parts/post-loop-news' ); 
+					
+					?>	
 							
 				</div>
 				

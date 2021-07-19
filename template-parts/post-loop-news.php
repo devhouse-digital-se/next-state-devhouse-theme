@@ -1,12 +1,14 @@
 <?php 
 
-// variables
-$enable_fwp = false;
-$posts_to_display = -1;
-$loop_type = $args['loop-type'];
+
+
+// post grid title
+if (get_field('post_grid_title')) :
+	echo '<div class="row"><h2 class="small-h2 m-auto">' . get_field('post_grid_title') . '</h2></div>';
+endif;
 
 // if FacetWP is active and loop type is grid, enable filtering
-if (function_exists('facetwp_display') && $loop_type == 'grid') :
+if (function_exists('facetwp_display')) :
 	
 	// enable fwp query var
 	$enable_fwp = true;
@@ -18,18 +20,17 @@ if (function_exists('facetwp_display') && $loop_type == 'grid') :
 
 endif;
 
-// if loop type is featured then alter query args
-if ($loop_type == 'featured') :
-	$posts_to_display = 1;
-endif;
+// check for featured post
 
-// query args
+
+// wp query for posts
 $args = [
     'post_type' => 'post',
     'posts_per_page' => $posts_to_display,
     'orderby' => 'date',
     'order' => 'DESC',
     'facetwp' => $enable_fwp, // we added this
+    'post__not_in' => array(get_field('featured_post')),
 ];
 $query = new WP_Query( $args );
 
@@ -48,11 +49,14 @@ if ($query->have_posts()) :
 	
 endif;
 
-wp_reset_query();
-
 // if FacetWP is active and loop type is grid, enable pagination
-if (function_exists('facetwp_display') && $loop_type == 'grid') :
+if (function_exists('facetwp_display')) :
 	
 	echo facetwp_display('facet', 'post_pagination');
 
-endif; ?>
+endif; 
+
+// reset wp query
+wp_reset_query();
+
+?>

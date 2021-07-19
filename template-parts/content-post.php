@@ -22,7 +22,7 @@ $date = get_the_date( 'F d Y' );
 			</a>
 			
 			<div class="entry-content">
-				<?php echo get_the_excerpt(); ?>
+				<?php echo wp_trim_words(get_the_excerpt(), 25, '...'); ?>
 			</div>
 			
 			<div class="read-more">

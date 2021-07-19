@@ -1000,6 +1000,11 @@ p {
 	line-height: 1.375;
 }
 
+.small-h2  {
+	font-size: 1.75em;
+	line-height: 1.214;
+}
+
 .large-p {
 	font-size: 1.125em;
 	line-height: 1.5em;
@@ -1013,14 +1018,14 @@ p {
 }
 
 html {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 @media screen and (min-width: 768px) {
 	
-	html {
+	/*html {
 		font-size: 14px;
-	}	
+	}*/	
 	
 	.container {
 	    max-width: 768px;
@@ -1422,6 +1427,11 @@ html {
 
 /* Footer CTA
 --------------------------------------------- */
+.footer-cta {
+	background: #D9E9FB;
+	margin-bottom: 100px;
+}
+
 .footer-cta__content {
 	text-align: center;
 }
@@ -1643,6 +1653,36 @@ article .read-more {
 	line-height: 24px;
 }
 
+/* Featured Post */
+
+@media screen and (min-width: 768px) {
+	.featured-post .article-wrapper > a,
+	.featured-post .entry-content__wrapper {
+		width: 50%;
+	}
+	
+	.featured-post .article-wrapper > a {
+		padding-right: 15px;
+	}
+	
+	.featured-post .entry-content__wrapper {
+		padding-left: 15px;
+		margin-top: 17px;
+		margin-bottom: 17px;
+	}
+	
+	.featured-post .article-wrapper > a > .entry-thumbnail {
+		padding-bottom: 0;
+		height: 100%;
+		min-height: 250px;
+	}
+	
+	.post-grid .featured-post .entry-meta {
+		margin-top: 0;
+	}
+	
+}
+
 /* FacetWP */
 .facetwp-facet {
 	margin-bottom: 0 !important;
@@ -1651,6 +1691,7 @@ article .read-more {
 .facetwp-facet-categories {
 	display: flex;
 	justify-content: center;
+	margin-top: 40px;
 }
 
 .facetwp-facet > .facetwp-radio,
@@ -1681,7 +1722,7 @@ article .read-more {
 
 .facetwp-pager {
 	text-align: center;
-	margin: 50px 0 0 0;
+	margin: 50px 0 100px 0;
 }
 
 .facetwp-pager > .facetwp-page {
@@ -1729,6 +1770,37 @@ article .read-more {
 @media screen and (min-width:768px) {
 	
 	.post-grid article .entry-meta {
+		font-size: 14px;
+	}
+
+}
+
+/* Featured author/team member */
+.entry-author {
+	margin-top: 25px;
+	display: flex;
+	align-items: center;
+}
+
+.entry-author .author-meta p {
+	font-size: 12px;
+	margin: 0;
+}
+
+.entry-author .author-meta .author-name {
+	font-weight: bold;
+}
+
+.entry-author .author-image {
+	width: 45px;
+	height: 45px;
+	margin-right: 17px;
+	border-radius: 50%;
+}
+
+@media screen and (min-width:768px) {
+	
+	.entry-author .author-meta p {
 		font-size: 14px;
 	}
 
