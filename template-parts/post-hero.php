@@ -11,14 +11,26 @@ $date = get_the_date( 'F d Y' );
 			<div class="row">
 				
 				<section class="col-12">
+					
+					<?php if (get_field('news_archive_link', 'option')) : ?>
+						<div class="return-to-page desktop-hidden">
+							<a href="<?php echo get_field('news_archive_link', 'option'); ?>"><?php echo __( '←  Back to all news', 'nextstate_theme' ); ?></a>
+						</div>
+					<?php endif; ?>
 	
-					<div class="article-wrapper d-flex align-items-center">
+					<div class="article-wrapper d-flex align-items-sm-start align-items-lg-center">
+						
+						<?php if (get_field('news_archive_link', 'option')) : ?>
+							<div class="return-to-page tablet-hidden mobile-hidden">
+								<a href="<?php echo get_field('news_archive_link', 'option'); ?>"><?php echo __( '←  Back to all news', 'nextstate_theme' ); ?></a>
+							</div>
+						<?php endif; ?>
 
 						<div class="entry-content__wrapper">
 							
 							<div class="entry-meta"><?php echo $category; ?> • <?php echo $date; ?></div>
 							
-							<div class="entry-title"><h1 class="small-h1"><?php echo get_the_title(); ?></h1></div>
+							<div class="entry-title"><h1 class="small-h1"><?php echo esc_html(get_the_title()); ?></h1></div>
 
 							<?php
 							
