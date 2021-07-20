@@ -20,7 +20,7 @@
 		        			<?php endif; ?>
 		        			
 		        			<?php if (get_field('cta_button_text') && get_field('cta_button_url')) : ?>
-		        				<a href="<?php echo esc_url(get_field('cta_button_url')); ?>" class="d-block btn btn-primary m-auto"><?php echo get_field('cta_button_text'); ?></a>
+		        				<a href="<?php echo esc_url(get_field('cta_button_url')); ?>" class="d-block btn btn-primary m-auto"><?php echo esc_html(get_field('cta_button_text')); ?></a>
 		        			<?php endif; ?>
 		        			
 		        		</div>
@@ -33,7 +33,7 @@
 		        			
 		        			<div class="row d-flex">
 		        				
-		        				<div class="cta-image bg-image" style="background-image: url('<?php echo get_field('cta_image'); ?>');"></div>
+		        				<div class="cta-image bg-image" style="background-image: url('<?php echo esc_url(get_field('cta_image')); ?>');"></div>
 		        				
 		        				<div class="footer-cta__wrapper">
 		        					<h2 class="cta-headline"><?php echo get_field('cta_headline'); ?></h2>
@@ -43,7 +43,7 @@
 				        			<?php endif; ?>
 				        			
 				        			<?php if (get_field('cta_button_text') && get_field('cta_button_url')) : ?>
-				        				<a href="<?php echo esc_url(get_field('cta_button_url')); ?>" class="d-block btn btn-primary"><?php echo get_field('cta_button_text'); ?></a>
+				        				<a href="<?php echo esc_url(get_field('cta_button_url')); ?>" class="d-block btn btn-primary"><?php echo esc_html(get_field('cta_button_text')); ?></a>
 				        			<?php endif; ?>
 		        				</div>
 		        				

@@ -1,40 +1,50 @@
 <?php
-// Check rows exists.
-if( have_rows('our_values') ): ?>
-	
-	<section class="container-fluid our-values m-100">
-		<div class="row">
-	    
-	    	<div class="container">
-	        	<div class="row">
 
-					<?php
-				    // Loop through rows.
-				    while( have_rows('our_values') ) : the_row();
-				        
-				        ?>
-				        
-				        <div class="col-md-4 value-item">
-				        	<div class="value-item__wrapper">
-					        	<div class="value-img bg-image" style="background-image: url('<?php echo get_sub_field('value_image'); ?>');"></div>
-					        	<h3><?php echo get_sub_field('value_headline'); ?></h3>
-					        	<p class="large-p"><?php echo get_sub_field('value_text'); ?></p>
-				        	</div>
-				        </div>
-				        
-				        <?php
+$services = get_field('services_categories');
+
+if ($services) : ?>
+	
+	<section class="container-fluid service-categories m-100">
+		<div class="row">
+			<div class="col-12">
 				
-				    // End loop.
-				    endwhile; ?>
-				    
-			    </div>
-	    	</div>
-		
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-12 service-categories__wrapper">
+							
+							<?php // solution category loop
+							
+							foreach($services as $services_cat) : ?>
+							
+								<article class="row service-category">
+									
+									<div class="col-12 d-md-flex justify-content-md-between align-items-md-center">
+									
+										<div class="bg-image" style="background-image: url(<?php echo esc_url(get_the_post_thumbnail_url($services_cat, 'large')); ?>);"></div>
+										
+										<div class="service-category__meta">
+											<p class="service-category__title"><?php echo esc_html(get_the_title($services_cat)); ?></p>
+											<h2 class="service-category__headline small-h2"><?php echo esc_html(get_field('page_custom_title', $services_cat));?></h2>
+											<p class="service-category__description large-p"><?php echo esc_html(get_post_field('page_intro_text', $services_cat)); ?></p>
+											<div class="read-more">
+												<a href="<?php echo esc_url(get_the_permalink($services_cat)); ?>" title="<?php echo esc_html(get_the_title($services_cat)); ?>"><?php echo __('Learn more →', 'nextstate-theme'); ?></a>
+											</div>
+										</div>
+									
+									</div>
+									
+								</article>
+							
+							<?php endforeach; ?>
+							
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
 		</div>
 	</section>
 	
-<?php
-// No value.
-else :
-    // Do something...
-endif;
+<?php endif; ?>

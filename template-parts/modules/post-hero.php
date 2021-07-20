@@ -14,7 +14,7 @@ $date = get_the_date( 'F d Y' );
 					
 					<?php if (get_field('news_archive_link', 'option')) : ?>
 						<div class="return-to-page desktop-hidden">
-							<a href="<?php echo get_field('news_archive_link', 'option'); ?>"><?php echo __( '←  Back to all news', 'nextstate_theme' ); ?></a>
+							<a href="<?php echo esc_url(get_field('news_archive_link', 'option')); ?>"><?php echo __( '←  Back to all news', 'nextstate_theme' ); ?></a>
 						</div>
 					<?php endif; ?>
 	
@@ -22,7 +22,7 @@ $date = get_the_date( 'F d Y' );
 						
 						<?php if (get_field('news_archive_link', 'option')) : ?>
 							<div class="return-to-page tablet-hidden mobile-hidden">
-								<a href="<?php echo get_field('news_archive_link', 'option'); ?>"><?php echo __( '←  Back to all news', 'nextstate_theme' ); ?></a>
+								<a href="<?php echo esc_url(get_field('news_archive_link', 'option')); ?>"><?php echo __( '←  Back to all news', 'nextstate_theme' ); ?></a>
 							</div>
 						<?php endif; ?>
 
@@ -45,7 +45,7 @@ $date = get_the_date( 'F d Y' );
 							
 						</div>
 						
-						<div class="entry-thumbnail bg-image" style="background-image: url('<?php echo get_the_post_thumbnail_url($featured_post, 'large'); ?>')"></div>
+						<div class="entry-thumbnail bg-image" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($featured_post, 'large')); ?>')"></div>
 					
 					</div>
 					

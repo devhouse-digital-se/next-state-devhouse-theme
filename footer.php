@@ -36,15 +36,15 @@
 						<div class="col-lg-4 footer-meta">
 							
 							<?php if (get_field('footer_about_text', 'option')) : ?>
-								<p class="footer-about"><?php echo get_field('footer_about_text', 'option'); ?></p>
+								<p class="footer-about"><?php echo esc_html(get_field('footer_about_text', 'option')); ?></p>
 							<?php endif; ?>
 							
 							<?php if (get_field('footer_copyright_text', 'option')) : ?>
-								<p class="copyright mobile-hidden tablet-hidden">© <?php echo date("Y"); ?> <?php echo get_field('footer_copyright_text', 'option'); ?></p>
+								<p class="copyright mobile-hidden tablet-hidden">© <?php echo date("Y"); ?> <?php echo esc_html(get_field('footer_copyright_text', 'option')); ?></p>
 							<?php endif; ?>
 								
 							<?php if (get_field('footer_link_url', 'option') && get_field('footer_link_text', 'option')) : ?>	
-								<p class="footer-link"><a href="<?php echo get_field('footer_link_url', 'option'); ?>"><?php echo get_field('footer_link_text', 'option'); ?></a></p>
+								<p class="footer-link"><a href="<?php echo get_field('footer_link_url', 'option'); ?>"><?php echo esc_html(get_field('footer_link_text', 'option')); ?></a></p>
 							<?php endif; ?>
 						
 						</div>
@@ -65,14 +65,14 @@
 						<div class="col-lg-3 footer-contact">
 							
 							<?php if (get_field('footer_phone_number', 'option')) : ?>
-								<a class="phone" href="tel:<?php echo get_field('footer_phone_number', 'option'); ?>">
-									<p><?php echo get_field('footer_phone_number', 'option'); ?></p>
+								<a class="phone" href="tel:<?php echo esc_html(get_field('footer_phone_number', 'option')); ?>">
+									<p><?php echo esc_html(get_field('footer_phone_number', 'option')); ?></p>
 								</a>
 							<?php endif; ?>
 							
 							<?php if (get_field('footer_e-mail', 'option')) : ?>
-								<a class="email" href="mailto:<?php echo get_field('footer_e-mail', 'option'); ?>">
-									<p><?php echo get_field('footer_e-mail', 'option'); ?></p>
+								<a class="email" href="mailto:<?php echo esc_html(get_field('footer_e-mail', 'option')); ?>">
+									<p><?php echo esc_html(get_field('footer_e-mail', 'option')); ?></p>
 								</a>
 							<?php endif; ?>
 					
@@ -93,7 +93,7 @@
 								        $icon_image = get_sub_field('social_media_image_icon_url');
 								        // Do something...
 								        
-								        echo '<a class="bg-image" target="_blank" href="' . $icon_link . '" style="background-image: url(' . $icon_image . ');"></a>';
+								        echo '<a class="bg-image" target="_blank" href="' . esc_url($icon_link) . '" style="background-image: url(' . esc_url($icon_image) . ');"></a>';
 								
 								    // End loop.
 								    endwhile;
@@ -109,7 +109,7 @@
 						<div class="col-12 desktop-hidden">
 							
 							<?php if (get_field('footer_copyright_text', 'option')) : ?>
-								<p class="copyright">© <?php echo date("Y"); ?> <?php echo get_field('footer_copyright_text', 'option'); ?></p>
+								<p class="copyright">© <?php echo date("Y"); ?> <?php echo esc_html(get_field('footer_copyright_text', 'option')); ?></p>
 							<?php endif; ?>
 								
 						</div>

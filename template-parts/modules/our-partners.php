@@ -8,7 +8,7 @@ if( have_rows('our_partners') ): ?>
 	    	<div class="container">
 	    		
 	    		<div class="row">
-	    			<h3 class="section-headline"><?php echo get_field('our_partners_headline'); ?></h3>
+	    			<h3 class="section-headline"><?php echo esc_html(get_field('our_partners_headline')); ?></h3>
 	    		</div>
 	    		
 	        	<div class="row">
@@ -23,10 +23,10 @@ if( have_rows('our_partners') ): ?>
 					        <div class="partner-item">
 					        	<?php if (get_sub_field('partner_url')) : ?>
 					        		<a href="<?php echo esc_url(get_sub_field('partner_url')); ?>" target="_blank">
-					        			<div class="partner-item__image" style="background-image: url(<?php echo get_sub_field('partner_logo'); ?>);"></div>
+					        			<div class="partner-item__image" style="background-image: url(<?php echo esc_html(get_sub_field('partner_logo')); ?>);"></div>
 					        		</a>
 					        	<?php else : ?>
-					        		<div class="partner-item__image" style="background-image: url(<?php echo get_sub_field('partner_logo'); ?>);"></div>
+					        		<div class="partner-item__image" style="background-image: url(<?php echo esc_html(get_sub_field('partner_logo')); ?>);"></div>
 					        	<?php endif; ?>
 					        </div>
 					        
@@ -48,3 +48,4 @@ if( have_rows('our_partners') ): ?>
 else :
     // Do something...
 endif;
+?>

@@ -4,7 +4,7 @@
 
 // post grid title
 if (get_field('post_grid_title')) :
-	echo '<div class="row"><h2 class="small-h2 m-auto">' . get_field('post_grid_title') . '</h2></div>';
+	echo '<div class="row"><h2 class="small-h2 m-auto">' . esc_html(get_field('post_grid_title')) . '</h2></div>';
 endif;
 
 // if FacetWP is active and loop type is grid, enable filtering

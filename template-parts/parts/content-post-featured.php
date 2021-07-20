@@ -11,16 +11,16 @@ $date = get_the_date( 'F d Y', $featured_post );
 	
 	<div class="article-wrapper d-md-flex align-items-center">
 		
-		<a href="<?php echo get_the_permalink($featured_post); ?>" title="<?php echo get_the_title($featured_post); ?>">
-			<div class="entry-thumbnail bg-image" style="background-image: url('<?php echo get_the_post_thumbnail_url($featured_post, 'large'); ?>')"></div>
+		<a href="<?php echo esc_url(get_the_permalink($featured_post)); ?>" title="<?php echo esc_html(get_the_title($featured_post)); ?>">
+			<div class="entry-thumbnail bg-image" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($featured_post, 'large')); ?>')"></div>
 		</a>
 	
 		<div class="entry-content__wrapper">
 			
 			<div class="entry-meta"><?php echo $category; ?> • <?php echo $date; ?></div>
 			
-			<a style="text-decoration: none;" href="<?php echo get_the_permalink($featured_post); ?>" title="<?php echo get_the_title($featured_post); ?>">
-				<div class="entry-title"><h4><?php echo get_the_title($featured_post); ?></h4></div>
+			<a style="text-decoration: none;" href="<?php echo esc_url(get_the_permalink($featured_post)); ?>" title="<?php echo esc_html(get_the_title($featured_post)); ?>">
+				<div class="entry-title"><h4><?php echo esc_html(get_the_title($featured_post)); ?></h4></div>
 			</a>
 			
 			<div class="entry-content">

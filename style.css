@@ -1383,6 +1383,10 @@ header {
 
 /* Our Values
 --------------------------------------------- */
+.our-values {
+	background-color: #D9E9FB;
+}
+
 .our-values .value-item {
 	text-align: center;
 	margin-bottom: 40px;
@@ -1421,6 +1425,77 @@ header {
 	}
 	
 }
+
+/* Selected services
+--------------------------------------------- */
+.service-categories__wrapper .service-category {
+		margin-bottom: 60px;
+	}
+
+.service-categories__wrapper .service-category__meta {
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+.service-categories__wrapper .service-category__title {
+	font-weight: bold;
+}
+
+.service-categories__wrapper .service-category .bg-image {
+	height: 0;
+	padding-bottom: 60.2%;
+}
+
+.service-categories__wrapper .service-category__meta .service-category__headline {
+	margin: 7.5px 0 15px 0;
+}
+
+.service-categories__wrapper .service-category__meta > p {
+	margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+	
+	.service-categories__wrapper .service-category {
+		margin-bottom: 100px;
+	}
+	
+	.service-categories__wrapper .service-category__meta {
+		margin-bottom: 15px;
+	}
+	
+	.service-categories__wrapper .service-category:nth-child(even) div {
+		flex-direction: row-reverse;
+	}
+	
+	.service-categories__wrapper .service-category:last-of-type {
+		margin-bottom: 0;
+	}
+	
+	.service-categories__wrapper .service-category .bg-image {
+		padding-bottom: 30%;
+	}
+	
+	.service-categories__wrapper .service-category .bg-image,
+	.service-categories__wrapper .service-category .service-category__meta {
+		width: calc(50% - 15px);
+	}
+	
+}
+
+@media screen and (min-width: 992px) {
+	
+	.service-categories__wrapper .service-category__meta .service-category__headline {
+		margin: 10px 0 25px 0;
+	}
+	
+	.service-categories__wrapper .service-category .bg-image,
+	.service-categories__wrapper .service-category .service-category__meta {
+		width: calc(50% - 30px);
+	}
+	
+}
+
 
 /* Our Partners
 --------------------------------------------- */

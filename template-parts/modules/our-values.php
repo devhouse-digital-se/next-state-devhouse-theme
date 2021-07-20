@@ -16,9 +16,9 @@ if( have_rows('our_values') ): ?>
 				        
 				        <div class="col-md-4 value-item">
 				        	<div class="value-item__wrapper">
-					        	<div class="value-img bg-image" style="background-image: url('<?php echo get_sub_field('value_image'); ?>');"></div>
-					        	<h3><?php echo get_sub_field('value_headline'); ?></h3>
-					        	<p class="large-p"><?php echo get_sub_field('value_text'); ?></p>
+					        	<div class="value-img bg-image" style="background-image: url('<?php echo esc_url(get_sub_field('value_image')); ?>');"></div>
+					        	<h3><?php echo esc_html(get_sub_field('value_headline')); ?></h3>
+					        	<p class="large-p"><?php echo esc_html(get_sub_field('value_text')); ?></p>
 				        	</div>
 				        </div>
 				        
@@ -38,3 +38,5 @@ if( have_rows('our_values') ): ?>
 else :
     // Do something...
 endif;
+
+?>
