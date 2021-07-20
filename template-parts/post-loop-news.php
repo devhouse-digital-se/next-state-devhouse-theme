@@ -20,9 +20,6 @@ if (function_exists('facetwp_display')) :
 
 endif;
 
-// check for featured post
-
-
 // wp query for posts
 $args = [
     'post_type' => 'post',
@@ -41,8 +38,12 @@ if ($query->have_posts()) :
 	
 	while ( $query->have_posts() ) : $query->the_post();
 	
+		echo '<article id="post-' . get_the_ID() . '" class="col-12 col-md-6 col-lg-4">';
+	
 		get_template_part( 'template-parts/content-post');
-		
+	
+		echo '</article>';
+	
 	endwhile;
 	
 	echo '</div>';

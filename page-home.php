@@ -20,6 +20,7 @@ get_header();
 		<?php get_template_part( 'template-parts/home-hero'); ?>
 		<?php get_template_part( 'template-parts/our-values'); ?>
 		<?php get_template_part( 'template-parts/our-partners'); ?>
+		<?php get_template_part( 'template-parts/post-loop'); ?>
 		
 	</main><!-- #main -->
 

@@ -1,8 +1,10 @@
 <?php if (get_field('display_cta') == TRUE) : ?>
-	<section class="container footer-cta m-100">
+	<section class="container footer-cta">
 		<div class="row">
+			
+			<div class="col-12">
 		    
-		    <div class="container">
+		    <div class="container m-100">
 		        <div class="row">
 		        	
 		        	<?php 
@@ -52,6 +54,8 @@
 	        		<?php endif; ?>
 		            
 		        </div>
+		    </div>
+		    
 		    </div>
 			
 		</div>

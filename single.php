@@ -19,14 +19,25 @@ get_header();
 				
 				<section class="container m-100">
 					<div class="row">
+						
+						<div class="col-sm-12 col-md-8 m-auto">
+							
+							<?php
 
-					<?php
-					
-					echo get_the_content();
-					
-					?>
+								echo get_the_content();
+								
+							?>
+							
+						</div>
 					
 					</div>
+					
+					<div class="row">
+						<div class="col-sm-12 col-md-8 col-lg-8 m-auto">
+							<?php get_template_part( 'template-parts/parts/share-links' ); ?>
+						</div>
+					</div>
+					
 				</section>
 				
 			</div>

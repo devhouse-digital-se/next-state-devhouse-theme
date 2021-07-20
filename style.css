@@ -1018,8 +1018,9 @@ p {
 
 /* Global
 --------------------------------------------- */
-.home {
-	background-color: #EEF6FF;
+
+body {
+	color: #1E7BE2; /* temp */
 }
 
 html {
@@ -1423,6 +1424,10 @@ header {
 
 /* Our Partners
 --------------------------------------------- */
+.our-partners {
+	background: #EEF6FF;
+}
+
 .our-partners .partner-item__image {
 	height: 50px;
 	width: 150px;
@@ -1432,11 +1437,33 @@ header {
 	background-repeat: no-repeat;
 }
 
+/* Our Partners
+--------------------------------------------- */
+.latest-posts {
+	padding-bottom: 45px;
+}
+
+.latest-posts .post-grid {
+	margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+	
+	.latest-posts {
+		padding-bottom: 70px;
+	}
+	
+}
+
+
 /* Footer CTA
 --------------------------------------------- */
 .footer-cta {
-	background: #D9E9FB;
 	margin-bottom: 100px;
+}
+
+.footer-cta .m-100 {
+	background: #EEF6FF;
 }
 
 .footer-cta__content {
