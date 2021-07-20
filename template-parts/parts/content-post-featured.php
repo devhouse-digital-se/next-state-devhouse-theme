@@ -32,7 +32,7 @@ $date = get_the_date( 'F d Y', $featured_post );
 			// team member
 			if (get_field('team_member', $featured_post)) : 
 				
-				get_template_part( 'template-parts/featured-team-member');
+				get_template_part( 'template-parts/parts/featured-team-member');
 				
 			endif; 
 			

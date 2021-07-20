@@ -23,7 +23,7 @@ if ($posts_to_display && $posts_to_display != 0) :
 		
 			echo '<article id="post-' . get_the_ID() . '" class="col-12 col-md-6">';
 	
-			get_template_part( 'template-parts/content-post');
+			get_template_part( 'template-parts/parts/content-post');
 		
 			echo '</article>';
 			

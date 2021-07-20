@@ -37,7 +37,7 @@ $date = get_the_date( 'F d Y' );
 							// team member
 							if (get_field('team_member')) : 
 								
-								get_template_part( 'template-parts/featured-team-member');
+								get_template_part( 'template-parts/parts/featured-team-member');
 								
 							endif; 
 							

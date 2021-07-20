@@ -40,7 +40,7 @@ if ($query->have_posts()) :
 	
 		echo '<article id="post-' . get_the_ID() . '" class="col-12 col-md-6 col-lg-4">';
 	
-		get_template_part( 'template-parts/content-post');
+		get_template_part( 'template-parts/parts/content-post');
 	
 		echo '</article>';
 	

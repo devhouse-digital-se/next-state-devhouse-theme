@@ -11,7 +11,7 @@
 
 ?>
 
-	<?php get_template_part( 'template-parts/footer-cta'); ?>
+	<?php get_template_part( 'template-parts/modules/footer-cta'); ?>
 
 	<footer id="colophon" class="site-footer">
 		<section class="container-fluid footer-content m-100">

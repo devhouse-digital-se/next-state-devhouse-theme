@@ -17,7 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php get_template_part( 'template-parts/page-hero' ); ?>
+		<?php get_template_part( 'template-parts/modules/page-hero' ); ?>
 		
 		<!-- post grid -->
 		<div class="container-fluid post-grid">
@@ -37,14 +37,14 @@ get_header();
 						
 						echo '<div class="featured-post row">';
 						
-							get_template_part( 'template-parts/content-post-featured');
+							get_template_part( 'template-parts/parts/content-post-featured');
 							
 						echo '</div>';
 						
 					endif;
 
 					// display main post grid
-					get_template_part( 'template-parts/post-loop-news' ); 
+					get_template_part( 'template-parts/modules/post-loop-news' ); 
 					
 					?>	
 							

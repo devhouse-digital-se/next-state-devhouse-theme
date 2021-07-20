@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<?php get_template_part( 'template-parts/post-hero' ); ?>
+	<?php get_template_part( 'template-parts/modules/post-hero' ); ?>
 
 	<main id="primary" class="site-main">
 		

@@ -18,9 +18,10 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<?php get_template_part( 'template-parts/home-hero'); ?>
-		<?php get_template_part( 'template-parts/our-values'); ?>
-		<?php get_template_part( 'template-parts/our-partners'); ?>
-		<?php get_template_part( 'template-parts/post-loop'); ?>
+		<?php get_template_part( 'template-parts/modules/our-values'); ?>
+		<?php get_template_part( 'template-parts/modules/our-partners'); ?>
+		<?php get_template_part( 'template-parts/modules/solution-categories'); ?>
+		<?php get_template_part( 'template-parts/modules/post-loop'); ?>
 		
 	</main><!-- #main -->
 
