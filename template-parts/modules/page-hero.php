@@ -1,10 +1,10 @@
-<section class="container-fluid home-hero bg-image" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full'));?>');">
+<section class="container-fluid page-hero bg-image" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full'));?>');">
 	<div class="row">
 	    
 	    <div class="container">
 	        <div class="row">
 	        
-	            <div class="col home-hero__content">
+	            <div class="col home-hero__content d-flex align-items-center align-items-md-end">
 	            	
 	            	<?php // get the page title
             		$page_title = get_the_title();
@@ -13,7 +13,7 @@
             		endif;
 	            	?>
 
-        			<h1 class="hero__headline"><?php echo esc_html($page_title); ?></h1>
+        			<h1 class="hero__headline small-h1"><?php echo esc_html($page_title); ?></h1>
         			
         			<?php if (get_field('page_intro_text')) : ?>
         				<p class="hero__description"><?php echo esc_html(get_field('page_intro_text')); ?></p>

@@ -9,15 +9,13 @@
 
 ?>
 
-<?php get_template_part( 'template-parts/page-hero' ); ?>
-
-<section class="container-fluid">
+<section class="container-fluid page-content__wrapper">
 	<div class="row">
 		
 		<section class="container m-100">
 			<div class="row">
 				
-				<div class="col-12">
+				<div class="col-12 col-md-8 m-auto">
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					
 						<div class="entry-content">
