@@ -988,10 +988,20 @@ h2 {
 	font-weight: bold;
 }
 
+.small-h2  {
+	font-size: 1.75em;
+	line-height: 1.214;
+}
+
 h3 {
 	font-size: 1.375em;
 	line-height: 1.5em;
 	font-weight: bold;
+}
+
+.large-h3 {
+	font-size: 1.5em;
+	line-height: 1.167;
 }
 
 h4 {
@@ -1003,11 +1013,6 @@ h4 {
 p {
 	font-size: 1em;
 	line-height: 1.375;
-}
-
-.small-h2  {
-	font-size: 1.75em;
-	line-height: 1.214;
 }
 
 .large-p {
@@ -2125,7 +2130,8 @@ article .read-more {
 
 /* Services template
 --------------------------------------------- */
-.services-grid .service-item {
+.services-grid .service-item,
+.related-services {
 	padding-bottom: 40px;
 	padding-top: 40px;
 }
@@ -2138,10 +2144,16 @@ article .read-more {
 	height: 0;
 	width: 100%;
 	padding-bottom: 100%;
+	margin-bottom: 15px;
 }
 
-.service-item__title {
+.service-item__title,
+.service-item__description {
 	margin: 0;
+}
+
+.service-item__description {
+	margin-top: 15px;
 }
 
 /* numbers */
@@ -2170,15 +2182,72 @@ article .read-more {
 	background-color: #D9E9FB;
 }
 
+.related-services .related-service__wrapper {
+	margin-bottom: 15px;
+}
+
+.related-services .related-service__wrapper:last-of-type {
+	margin-bottom: 0;
+}
+
+.related-service {
+	background-color: #EEF6FF;
+	text-decoration: none;
+	display: block;
+	height: 100%;
+	padding: 30px 30px 45px 30px;
+}
+
+.related-service__title,
+.related-service__headline {
+	margin: 0;
+	color: #1E7BE2;
+}
+
+.related-service__title {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.related-service__headline {
+	position: relative;
+	padding-right: 30px;
+}
+
+.related-service__headline::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 45px;
+	width: 45px;
+	background-image: url(/wp-content/themes/next_state/inc/images/related-post-arrow.svg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.related-service__icon {
+	width: 67px;
+	height: 67px;
+	margin-bottom: 35px;
+}
+
 @media screen and (min-width: 768px) {
 	
-	.services-grid .service-item {
+	.related-services .related-service__wrapper {
+		margin-bottom: 0;
+	}
+	
+	.services-grid .service-item,
+	.related-services {
 		padding-bottom: 60px;
 		padding-top: 60px;
 	}
 	
 	.services-grid .service-item .bg-image {
 		background-position: right center;
+		margin-bottom: 0;
 	}
 	
 	.services-grid .service-item .bg-image {
@@ -2198,7 +2267,8 @@ article .read-more {
 
 @media screen and (min-width: 992px) {
 	
-	.services-grid .service-item {
+	.services-grid .service-item,
+	.related-services {
 		padding-bottom: 80px;
 		padding-top: 80px;
 	}

@@ -38,7 +38,7 @@ if ($services_category) :
 			<!-- service item -->
 			<div class="row service-item">
 				<div class="container">
-					<div class="row service-item__wrapper">
+					<div class="row service-item__wrapper flex-column-reverse flex-md-row">
 						
 						<?php 
 						// adjust column size if no featured image is present

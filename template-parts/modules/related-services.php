@@ -25,15 +25,7 @@ if ($page_query->have_posts()) : ?>
 	
 				<?php while ( $page_query->have_posts() ) : $page_query->the_post(); ?>
 				
-				<a href="<?php echo esc_url(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>" class="col-12 col-md-6">
-					
-					<?php if (get_field('ICONNAMEHERE')) : ?>
-						<div class="related-service__icon"></div>
-					<?php endif; ?>
-					
-					<p class="related-service__title"><?php echo esc_html(get_the_title()); ?></p>
-					<h3 class="related-service__headline"><?php echo esc_html(get_field('page_custom_title', get_the_ID())); ?></h3>
-				</a>
+					<?php get_template_part( 'template-parts/parts/content-post-related' ); ?>
 
 				<?php endwhile; ?>
 		
