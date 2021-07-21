@@ -186,6 +186,19 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// redirect of service category pages
+function services_redirect() {
+	
+	if ( is_tax( 'solution_categories' ) == true ) :
+		
+	    wp_redirect( '/' . get_queried_object()->slug, 301 );
+	    exit();
+	    
+	endif;
+	
+}
+add_action( 'template_redirect', 'services_redirect' );
+
 // ACF - Theme options
 if( function_exists('acf_add_options_page') ) {
 	

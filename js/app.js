@@ -25,3 +25,11 @@ jQuery( document ).ready(function($) {
     });
     
 });
+
+function toggleTeamInfo(button, event) {
+    event.preventDefault();
+    
+    let memberId = jQuery(button).attr('data-team-member');
+    jQuery('.team-grid .team-member__information[data-team-member="' + memberId + '"]').toggleClass('open');
+    
+}

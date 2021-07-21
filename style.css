@@ -1808,7 +1808,7 @@ article .entry-title h4 {
 }
 
 .post-grid article .entry-meta {
-	margin-top: 30px;
+	margin-top: 15px;
 	font-size: 12px;
 	margin-bottom: 5px;
 }
@@ -2236,7 +2236,7 @@ article .read-more {
 @media screen and (min-width: 768px) {
 	
 	.related-services .related-service__wrapper {
-		margin-bottom: 0;
+		margin-bottom: 30px;
 	}
 	
 	.services-grid .service-item,
@@ -2280,3 +2280,86 @@ article .read-more {
 	
 }
 
+/* Page intro module
+--------------------------------------------- */
+.page-intro h2 {
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.page-intro p:last-of-type {
+	margin-bottom: 0;
+}
+
+.page-intro p:first-of-type {
+	margin-top: 0;
+}
+
+.page-intro .bg-image {
+	background-position: right center;
+	height: 100%;
+}
+
+
+/* Team
+--------------------------------------------- */
+.team {
+	background-color: #D9E9FB;
+}
+
+.team-intro h2 {
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.team-intro p:last-of-type {
+	margin-bottom: 0;
+}
+
+.team-intro p:first-of-type {
+	margin-top: 0;
+}
+
+.team-grid {
+	margin-top: 0;
+}
+
+.team-grid article {
+	vertical-align: top;
+}
+
+.team-grid .bg-image {
+	padding-bottom: 100%;
+	margin-bottom: 15px;
+}
+
+.team-grid .entry-title h4 {
+	margin-bottom: 10px;
+}
+
+.team-grid .position,
+.team-member__information {
+	margin: 0;
+}
+
+.team-grid .section-title h4 {
+	text-align: center;
+}
+
+/* toggle team member info */
+.team-member__information {
+	height: 75px;
+	overflow: hidden;
+}
+
+.team-member__information.open {
+	height: auto;
+}
+
+@media screen and (min-width: 768px) {
+	
+	.team-intro {
+		text-align: center;
+	}
+	
+}
