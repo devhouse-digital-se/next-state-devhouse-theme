@@ -27,6 +27,7 @@ if ($services_category) :
 	// post loop
 	if ($query->have_posts()) :
 		
+		// start of service items grid
 		echo '<section class="container-fluid services-grid ' . $display_numbers . '">';
 		
 		// number counter
@@ -34,6 +35,7 @@ if ($services_category) :
 		
 		while ( $query->have_posts() ) : $query->the_post(); ?>
 		
+			<!-- service item -->
 			<div class="row service-item">
 				<div class="container">
 					<div class="row service-item__wrapper">
@@ -82,7 +84,7 @@ if ($services_category) :
 		
 		endwhile;
 		
-		echo '</div>';
+		echo '</section>';
 		
 	endif;
 	

@@ -31,6 +31,9 @@ get_header();
 		
 		<!-- services -->
 		<?php get_template_part( 'template-parts/modules/post-loop-services' ); ?>
+		
+		<!-- related services -->
+		<?php get_template_part( 'template-parts/modules/related-services' ); ?>
 
 	</main><!-- #main -->
 

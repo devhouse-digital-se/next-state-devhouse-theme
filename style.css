@@ -2165,6 +2165,11 @@ article .read-more {
 	display: block;
 }
 
+/* related services */
+.related-services {
+	background-color: #D9E9FB;
+}
+
 @media screen and (min-width: 768px) {
 	
 	.services-grid .service-item {
