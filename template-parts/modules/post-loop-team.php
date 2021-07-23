@@ -23,7 +23,7 @@ if ($team_categories) :
 		$args = [
 		    'post_type' => 'team_member',
 		    'posts_per_page' => -1,
-		    'orderby' => 'date',
+		    'orderby' => 'title',
 		    'order' => 'DESC',
 		    'tax_query' => array(
 		        array(
@@ -38,11 +38,11 @@ if ($team_categories) :
 		// post loop for each team member
 		if ($query->have_posts()) :
 			
-			echo '<div class="' . $team_category->slug . ' row d-inline-block">';
+			echo '<div class="row team-category__row ' . $team_category->slug . ' d-md-inline-block" data-items="' . $query->found_posts . '">';
 			
 			while ( $query->have_posts() ) : $query->the_post();
 			
-				echo '<article id="post-' . get_the_ID() . '" class="col-12 col-md-6 col-lg-4 d-inline-block">';
+				echo '<article id="post-' . get_the_ID() . '" class="col-12 col-md-6 col-lg-4 d-md-inline-block">';
 			
 					get_template_part( 'template-parts/parts/content-team-member');
 			

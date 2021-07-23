@@ -31,34 +31,34 @@ get_header();
 		
 		?>
 		
-			<!-- Page intro -->
-			<section class="container-fluid page-intro">
-				<div class="row">
-					
-					<div class="container m-100">
-						<div class="row">
-							
-							<div class="col-12 <?php echo $column_size; ?>">
-								<h2 class="small-h2"><?php echo esc_html(get_field('company_information_headline')); ?></h2>
-								<p class="large-p"><?php echo esc_html(get_field('company_information')); ?></p>
-							</div>
-							
-							<?php if (get_field('company_logo')) : ?>
-								<div class="col-md-4" >
-									<div class="bg-image contain" style="background-image: url(<?php echo esc_url(get_field('company_logo')); ?>);"></div>
-								</div>
-							<?php endif; ?>
-							
+		<!-- Page intro -->
+		<section class="container-fluid page-intro">
+			<div class="row">
+				
+				<div class="container m-100">
+					<div class="row">
+						
+						<div class="col-12 col-md-8 m-auto <?php echo $column_size; ?>">
+							<h2 class="small-h2"><?php echo esc_html(get_field('company_information_headline')); ?></h2>
+							<p class="large-p"><?php echo esc_html(get_field('company_information')); ?></p>
 						</div>
-					</div><!-- .page-intro -->
-					
-				</div>
-			</section>
+						
+						<?php if (get_field('company_logo')) : ?>
+							<div class="col-md-4" >
+								<div class="bg-image contain" style="background-image: url(<?php echo esc_url(get_field('company_logo')); ?>);"></div>
+							</div>
+						<?php endif; ?>
+						
+					</div>
+				</div><!-- .page-intro -->
+				
+			</div>
+		</section>
 		
 		<?php endif; ?>
 		
 		<!-- Our team -->
-		<section class="container-fluid team">
+		<section class="container-fluid team team-intro__wrapper">
 			<div class="row">
 				
 				<div class="container m-100">
@@ -72,11 +72,89 @@ get_header();
 					</div>
 					<?php endif; ?>
 				</div><!-- .team-intro -->
-				
-				<?php get_template_part( 'template-parts/modules/post-loop-team' ); ?>
-				
+
 			</div>
+			
+			<div class="row">
+				<?php get_template_part( 'template-parts/modules/post-loop-team' ); ?>
+			</div>
+			
 		</section>
+		
+		<!-- About us - information rows -->
+		<?php if( have_rows('information_rows_section') ): ?>
+		<section class="container-fluid information-rows alternating-rows">
+			<div class="row">
+				
+				<div class="container m-100">
+
+					<?php
+
+				    // Loop through rows.
+				    while( have_rows('information_rows_section') ) : the_row(); ?>
+				
+				        <article class="row alternating-row">
+								
+							<div class="col-12 d-md-flex justify-content-md-between align-items-md-center">
+							
+								<div class="bg-image" style="background-image: url(<?php echo esc_url(get_sub_field('information_row_image')); ?>);"></div>
+								
+								<div class="alternating-row__meta">
+									<h2 class="alternating-row__headline small-h2"><?php echo esc_html(get_sub_field('information_row_headline'));?></h2>
+									<p class="alternating-row__description large-p"><?php echo esc_html(get_sub_field('information_row_text', $services_cat)); ?></p>
+								</div>
+							
+							</div>
+							
+						</article>
+				
+				    <?php endwhile; ?>
+				    
+				</div>
+
+			</div>
+			
+		</section>
+		<?php endif; ?>
+		
+		<!-- About us - information rows -->
+		<?php if( have_rows('information_boxes') ): ?>
+		<section class="container-fluid info-boxes">
+			<div class="row">
+				
+				<div class="container m-100">
+					
+					<?php if (get_field('information_boxes_section_headline')) : ?>
+					<div class="row team-intro">
+						<div class="col-12 col-md-8 m-auto">
+							<h2 class="small-h2"><?php echo esc_html(get_field('information_boxes_section_headline')); ?></h2>
+						</div>
+					</div>
+					<?php endif; ?>
+					
+					<div class="row">
+						
+						<?php
+
+					    // Loop through rows.
+					    while( have_rows('information_boxes') ) : the_row(); ?>
+					
+					        <article class="col-12 col-lg-4 info-box">
+					        	<div class="info-box__wrapper">
+					        		<div class="bg-image" style="background-image: url('<?php echo esc_url(get_sub_field('information_box_image')); ?>');"></div>
+									<h3 class="info-box__headline"><?php echo esc_html(get_sub_field('information_box_headline'));?></h3>
+									<p class="info-box__description large-p"><?php echo esc_html(get_sub_field('information_box_text', $services_cat)); ?></p>
+								</div>
+							</article>
+					
+					    <?php endwhile; ?>
+					</div>
+				</div>
+
+			</div>
+			
+		</section>
+		<?php endif; ?>
 
 	</main><!-- #main -->
 

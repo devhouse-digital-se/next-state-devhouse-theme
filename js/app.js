@@ -30,6 +30,8 @@ function toggleTeamInfo(button, event) {
     event.preventDefault();
     
     let memberId = jQuery(button).attr('data-team-member');
-    jQuery('.team-grid .team-member__information[data-team-member="' + memberId + '"]').toggleClass('open');
     
+    jQuery(button).toggleClass('active');
+    jQuery(button).prev().prev().slideToggle(400);
+    jQuery(button).prev().slideToggle(400);
 }

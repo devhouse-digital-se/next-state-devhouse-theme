@@ -2,7 +2,7 @@
 // Check rows exists.
 if( have_rows('our_values') ): ?>
 	
-	<section class="container-fluid our-values m-100">
+	<section class="container-fluid info-boxes m-100">
 		<div class="row">
 	    
 	    	<div class="container">
@@ -14,9 +14,9 @@ if( have_rows('our_values') ): ?>
 				        
 				        ?>
 				        
-				        <div class="col-md-4 value-item">
-				        	<div class="value-item__wrapper">
-					        	<div class="value-img bg-image" style="background-image: url('<?php echo esc_url(get_sub_field('value_image')); ?>');"></div>
+				        <div class="col-md-4 info-box">
+				        	<div class="info-box__wrapper">
+					        	<div class="bg-image" style="background-image: url('<?php echo esc_url(get_sub_field('value_image')); ?>');"></div>
 					        	<h3><?php echo esc_html(get_sub_field('value_headline')); ?></h3>
 					        	<p class="large-p"><?php echo esc_html(get_sub_field('value_text')); ?></p>
 				        	</div>
