@@ -37,7 +37,9 @@
 			<p class="team-member__information full" data-team-member="<?php echo get_the_ID(); ?>"><?php echo get_field('team_member_information'); ?></p>
 			<p class="team-member__information intro" data-team-member="<?php echo get_the_ID(); ?>"><?php echo wp_trim_words(get_field('team_member_information'), 15, '...'); ?></p>
 			<a href="#" onclick="toggleTeamInfo(this, event)" data-team-member="<?php echo get_the_ID(); ?>">
-				<p class="large-p"><?php echo __('Read more', 'nextstate-theme'); ?></p></a>
+				<p class="large-p closed"><?php echo __('Read more', 'nextstate-theme'); ?></p>
+				<p class="large-p opened"><?php echo __('Read less', 'nextstate-theme'); ?></p>
+			</a>
 		</div>
 		<?php endif; ?>
 		
