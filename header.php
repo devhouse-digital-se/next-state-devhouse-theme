@@ -29,12 +29,11 @@
 		
 		<?php get_template_part( 'template-parts/main-navigation'); ?>
 		
-		<?php 
-		if (get_field('display_section_navigation') == 1) :
+		<?php
+		if (is_page_template('page-service.php') && get_field('display_section_navigation') == 1) :
 			get_template_part( 'template-parts/modules/hero-menu' ); 
 		endif;
 		?>
 		
 	</header><!-- #masthead -->
-	
 	

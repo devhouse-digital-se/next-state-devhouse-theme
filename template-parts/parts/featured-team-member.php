@@ -8,6 +8,11 @@ endif;
 
 $team_member = get_field('team_member', $post_id);
 
+// contact page
+if (get_sub_field('location_team_member', get_the_ID())) :
+	$team_member = get_sub_field('location_team_member');
+endif;
+
 ?>
 
 <div class="entry-author">

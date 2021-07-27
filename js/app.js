@@ -26,6 +26,7 @@ jQuery( document ).ready(function($) {
     
 });
 
+// Toggle team member information
 function toggleTeamInfo(button, event) {
     event.preventDefault();
     
