@@ -13,7 +13,7 @@ if ($services_category) :
 	    'post_type' => 'services',
 	    'posts_per_page' => -1,
 	    'orderby' => 'menu_order',
-	    'order' => 'DESC',
+	    'order' => 'ASC',
 	    'tax_query' => array(
 	        array (
 	            'taxonomy' => 'solution_categories',

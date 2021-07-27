@@ -22,7 +22,7 @@ if( have_rows('our_partners') ): ?>
 					        
 					        <div class="partner-item">
 					        	<?php if (get_sub_field('partner_url')) : ?>
-					        		<a href="<?php echo esc_url(get_sub_field('partner_url')); ?>" target="_blank">
+					        		<a title="<?php echo esc_url(get_sub_field('partner_url')); ?>" href="<?php echo esc_url(get_sub_field('partner_url')); ?>" target="_blank">
 					        			<div class="partner-item__image" style="background-image: url(<?php echo esc_html(get_sub_field('partner_logo')); ?>);"></div>
 					        		</a>
 					        	<?php else : ?>

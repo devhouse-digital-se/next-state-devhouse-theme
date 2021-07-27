@@ -12,7 +12,7 @@
         			<h1 class="hero__headline"><?php echo esc_html(get_field('hero_headline')); ?></h1>
         			
         			<?php if (get_field('hero_text')) : ?>
-        				<p class="hero__description"><?php echo esc_html(get_field('hero_text')); ?></p>
+        				<p class="hero__description"><?php echo get_field('hero_text'); ?></p>
         			<?php endif; ?>
         			
         			<?php if (get_field('hero_cta_text') && get_field('hero_cta_link')) : ?>

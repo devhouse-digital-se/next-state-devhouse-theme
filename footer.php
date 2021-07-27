@@ -93,7 +93,7 @@
 								        $icon_image = get_sub_field('social_media_image_icon_url');
 								        // Do something...
 								        
-								        echo '<a class="bg-image" target="_blank" href="' . esc_url($icon_link) . '" style="background-image: url(' . esc_url($icon_image) . ');"></a>';
+								        echo '<a class="bg-image" title="' . esc_url($icon_link) . '" target="_blank" href="' . esc_url($icon_link) . '" style="background-image: url(' . esc_url($icon_image) . ');"></a>';
 								
 								    // End loop.
 								    endwhile;

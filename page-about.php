@@ -101,7 +101,7 @@ get_header();
 								
 								<div class="alternating-row__meta">
 									<h2 class="alternating-row__headline small-h2"><?php echo esc_html(get_sub_field('information_row_headline'));?></h2>
-									<p class="alternating-row__description large-p"><?php echo esc_html(get_sub_field('information_row_text', $services_cat)); ?></p>
+									<div class="alternating-row__description large-p"><?php echo get_sub_field('information_row_text'); ?></div>
 								</div>
 							
 							</div>
@@ -117,7 +117,7 @@ get_header();
 		</section>
 		<?php endif; ?>
 		
-		<!-- About us - information rows -->
+		<!-- About us - information boxes -->
 		<?php if( have_rows('information_boxes') ): ?>
 		<section class="container-fluid info-boxes">
 			<div class="row">

@@ -27,7 +27,7 @@
 
 	<header id="masthead" class="site-header">
 		
-		<?php get_template_part( 'template-parts/main-navigation'); ?>
+		<?php get_template_part( 'template-parts/modules/main-navigation'); ?>
 		
 		<?php
 		if (is_page_template('page-service.php') && get_field('display_section_navigation') == 1) :

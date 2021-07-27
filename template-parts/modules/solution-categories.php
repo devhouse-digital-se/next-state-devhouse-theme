@@ -15,7 +15,15 @@ if ($services) : ?>
 							
 							<?php // solution category loop
 							
-							foreach($services as $services_cat) : ?>
+							foreach($services as $services_cat) :
+								
+								// Headline text override
+								$headline = get_field('page_custom_title', $services_cat);
+								if (get_field('start_page_headline', $services_cat)) :
+									$headline = get_field('start_page_headline', $services_cat);
+								endif; 
+								
+								?>
 							
 								<article class="row alternating-row">
 									
@@ -25,7 +33,7 @@ if ($services) : ?>
 										
 										<div class="alternating-row__meta">
 											<p class="alternating-row__title"><?php echo esc_html(get_the_title($services_cat)); ?></p>
-											<h2 class="alternating-row__headline small-h2"><?php echo esc_html(get_field('page_custom_title', $services_cat));?></h2>
+											<h2 class="alternating-row__headline small-h2"><?php echo esc_html($headline);?></h2>
 											<p class="alternating-row__description large-p"><?php echo esc_html(get_post_field('page_intro_text', $services_cat)); ?></p>
 											<div class="read-more">
 												<a href="<?php echo esc_url(get_the_permalink($services_cat)); ?>" title="<?php echo esc_html(get_the_title($services_cat)); ?>"><?php echo __('Learn more →', 'nextstate-theme'); ?></a>

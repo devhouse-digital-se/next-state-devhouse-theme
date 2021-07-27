@@ -13,7 +13,7 @@ if ($services_category) :
 	    'post_type' => 'services',
 	    'posts_per_page' => -1,
 	    'orderby' => 'menu_order',
-	    'order' => 'DESC',
+	    'order' => 'ASC',
 	    'tax_query' => array(
 	        array (
 	            'taxonomy' => 'solution_categories',
@@ -63,7 +63,7 @@ if ($services_category) :
 									<h2 class="service-item__title small-h2"><?php echo esc_html(get_the_title(get_the_ID())); ?></h2>
 									
 								</div>
-								<p class="service-item__description large-p"><?php echo get_the_content(get_the_ID()); ?></p>
+								<div class="service-item__description large-p"><?php echo wpautop(get_the_content(get_the_ID())); ?></div>
 							</div>
 							
 						</div>
