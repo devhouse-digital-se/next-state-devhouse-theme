@@ -1,4 +1,4 @@
-<div class="article-wrapper">
+<div class="article-wrapper" tabindex="0">
 
 	<div class="entry-content__wrapper">
 		

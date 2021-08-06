@@ -124,5 +124,7 @@
 
 <?php wp_footer(); ?>
 
+<script src="/wp-content/themes/next_state/js/mhead.js"></script>
+
 </body>
 </html>

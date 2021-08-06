@@ -20,39 +20,45 @@ get_header();
 		<?php get_template_part( 'template-parts/modules/page-hero' ); ?>
 		
 		<!-- post grid -->
-		<div class="container-fluid post-grid">
+		<section class="container-fluid post-grid-featured m-100">
 			<div class="row">
 				
 				<div class="container">
-					
+				
 					<?php
-					
-					// variables
-					$enable_fwp = false;
-					$posts_to_display = -1;
-					$featured_post = get_field('featured_post');
-					
-					// display featured post if applicable
-					if ($featured_post) :
+				
+						// variables
+						$enable_fwp = false;
+						$posts_to_display = -1;
+						$featured_post = get_field('featured_post');
 						
-						echo '<div class="featured-post row">';
-						
-							get_template_part( 'template-parts/parts/content-post-featured');
+						// display featured post if applicable
+						if ($featured_post) :
 							
-						echo '</div>';
-						
-					endif;
-
-					// display main post grid
-					get_template_part( 'template-parts/modules/post-loop-news' ); 
-					
-					?>	
+							echo '<div class="featured-post row">';
 							
+								get_template_part( 'template-parts/parts/content-post-featured');
+								
+							echo '</div>';
+							
+						endif;
+					
+					?>
+					
 				</div>
 				
 			</div>
-		</div><!-- .post grid -->
-		
+		</section>
+
+		<section class="container-fluid post-grid m-100">
+			<div class="row">
+				<div class="container">
+					<div class="col-12">
+						<?php get_template_part( 'template-parts/modules/post-loop-news' ); ?>
+					</div>
+				</div>
+			</div>
+		</section>
 		
 	</main><!-- #main -->
 

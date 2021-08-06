@@ -145,10 +145,7 @@ function next_state_scripts() {
 	
 	// Enqueue BootStrap 4 Grid CSS
 	wp_enqueue_style( 'bootstrap-grid-style', get_template_directory_uri() . '/inc/css/bootstrap-grid.min.css' );
-	
-	// Custom nextstate theme styles
-	wp_enqueue_style( 'nextstate-custom-css', get_template_directory_uri() . '/inc/css/custom.css' );
-	
+
 	// Hamburger
 	wp_enqueue_style( 'hamburger-css', get_template_directory_uri() . '/inc/css/hamburgers.min.css' );
 	

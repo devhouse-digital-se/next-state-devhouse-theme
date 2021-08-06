@@ -2,7 +2,7 @@
 // Check rows exists.
 if( have_rows('our_partners') ): ?>
 	
-	<section class="container-fluid our-partners m-100">
+	<section class="container-fluid our-partners m-50">
 		<div class="row">
 	    
 	    	<div class="container">

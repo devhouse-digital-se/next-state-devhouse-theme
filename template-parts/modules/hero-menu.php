@@ -1,6 +1,10 @@
 <?php 
 
 $services_category = get_field('selected_service_category', get_the_ID())->slug;
+$menu_alignment = get_field('section_navigation_position', get_the_ID());
+if ($menu_alignment == NULL) : 
+	$menu_alignment = 'justify-content-end';
+endif;
 $display_numbers = '';
 if (get_field('display_numbers', get_the_ID()) == 1) :
 	$display_numbers = 'display-numbers';
@@ -31,9 +35,8 @@ if ($services_category) :
 			<div class="row">
 				<div class="container">
 					<div class="row">
-						<ul class="hero-menu__wrapper col-12 d-flex justify-content-end">
+						<ul class="hero-menu__wrapper col-12 d-flex <?php echo $menu_alignment; ?>">
 							
-			
 						<?php
 						
 						$section_title = get_field('section_navigation_names');

@@ -18,7 +18,7 @@ $page_query = new WP_Query($args);
 // post loop
 if ($page_query->have_posts()) : ?>
 	
-	<section class="container-fluid related-services">
+	<section class="container-fluid related-services m-100">
 		<div class="row">
 			<div class="container">
 				<div class="row">

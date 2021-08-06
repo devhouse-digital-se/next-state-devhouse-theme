@@ -18,10 +18,39 @@ jQuery( document ).ready(function($) {
                 slidesToScroll: 2
               }
             },
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-      ],
+        ],
+    });
+    
+    // Smooth scroll #links
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+    
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top - 100 // offset
+        }, 0);
+    });
+    
+    // stickyHeader
+    new Mhead( "#masthead", {
+        pin: 100
+    });
+    console.log(123);
+    
+    // fade hero contents on scroll
+    var heroContent = $('.page-hero .home-hero__content'),
+    limit = 400;  /* scrolltop value when opacity should be 0 */
+    
+    var homeHeroContent = $('.home-hero .home-hero__content'),
+    limit = 400;  /* scrolltop value when opacity should be 0 */
+
+    $(window).on('scroll', function() {
+       var st = $(this).scrollTop();
+    
+        /* avoid unnecessary call to jQuery function */
+        if (st <= limit) {
+            heroContent.css({ 'opacity' : (1 - st/limit) });
+            homeHeroContent.css({ 'opacity' : (1 - st/limit) });
+        }
     });
     
 });
@@ -37,7 +66,6 @@ function toggleTeamInfo(button, event) {
         jQuery(activeItem).toggleClass('active');
         jQuery(activeItem).prev().prev().slideToggle(400);
         jQuery(activeItem).prev().slideToggle(400);
-        console.log("poop");
     }
     
     // toggle active class on button

@@ -45,7 +45,9 @@ $date = get_the_date( 'F d Y' );
 							
 						</div>
 						
-						<div class="entry-thumbnail bg-image" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($featured_post, 'large')); ?>')"></div>
+						<div class="entry-thumbnail bg-image">
+							<?php echo get_the_post_thumbnail($featured_post, 'large'); ?>
+						</div>
 					
 					</div>
 					

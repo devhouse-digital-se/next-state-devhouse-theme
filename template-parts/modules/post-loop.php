@@ -16,12 +16,14 @@ if ($posts_to_display && $posts_to_display != 0) :
 	// post loop
 	if ($query->have_posts()) :
 		
-		echo '<section class="container m-100 latest-posts">';
+		echo '<section class="container-fluid m-100 latest-posts">';
+		echo '<section class="row">';
+		echo '<section class="container">';
 		echo '<div class="post-grid row">';
 		
 		while ( $query->have_posts() ) : $query->the_post();
 		
-			echo '<article id="post-' . get_the_ID() . '" class="col-12 col-md-6">';
+			echo '<article id="post-' . get_the_ID() . '" class="col-12 col-md-4">';
 	
 			get_template_part( 'template-parts/parts/content-post');
 		
@@ -29,6 +31,8 @@ if ($posts_to_display && $posts_to_display != 0) :
 			
 		endwhile;
 		
+		echo '</div>';
+		echo '</div>';
 		echo '</div>';
 		echo '</div>';
 		

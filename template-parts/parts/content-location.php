@@ -7,7 +7,7 @@
 		
 			<h4 class="entry-title" ><?php echo esc_html(get_sub_field('location_headline')); ?></h4>
 			
-			<ul class="location-information">
+			<ul class="location-information d-flex flex-column align-items-start">
 			
 				<?php if (get_sub_field('location_address')) : ?>
 				<li class="address">

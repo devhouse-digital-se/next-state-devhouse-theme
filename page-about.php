@@ -32,7 +32,7 @@ get_header();
 		?>
 		
 		<!-- Page intro -->
-		<section class="container-fluid page-intro">
+		<section class="container-fluid page-intro" tabindex="0">
 			<div class="row">
 				
 				<div class="container m-100">
@@ -61,7 +61,7 @@ get_header();
 		<section class="container-fluid team team-intro__wrapper">
 			<div class="row">
 				
-				<div class="container m-100">
+				<div class="container m-100" tabindex="0">
 					
 					<?php if (get_field('team_information_headline') or get_field('team_information')) : ?>
 					<div class="row team-intro">
@@ -83,7 +83,7 @@ get_header();
 		
 		<!-- About us - information rows -->
 		<?php if( have_rows('information_rows_section') ): ?>
-		<section class="container-fluid information-rows alternating-rows">
+		<section class="container-fluid information-rows alternating-rows" tabindex="0">
 			<div class="row">
 				
 				<div class="container m-100">
@@ -97,7 +97,12 @@ get_header();
 								
 							<div class="col-12 d-md-flex justify-content-md-between align-items-md-center">
 							
-								<div class="bg-image" style="background-image: url(<?php echo esc_url(get_sub_field('information_row_image')); ?>);"></div>
+								<div class="img-container">
+									<img 
+										src="<?php echo esc_url(get_sub_field('information_row_image')['url']); ?>" 
+										alt="<?php echo get_sub_field('information_row_image')['alt']; ?>" 
+									/>
+								</div>
 								
 								<div class="alternating-row__meta">
 									<h2 class="alternating-row__headline small-h2"><?php echo esc_html(get_sub_field('information_row_headline'));?></h2>
@@ -119,7 +124,7 @@ get_header();
 		
 		<!-- About us - information boxes -->
 		<?php if( have_rows('information_boxes') ): ?>
-		<section class="container-fluid info-boxes">
+		<section class="container-fluid info-boxes" tabindex="0">
 			<div class="row">
 				
 				<div class="container m-100">
@@ -142,7 +147,7 @@ get_header();
 					        <article class="col-12 col-lg-4 info-box">
 					        	<div class="info-box__wrapper">
 					        		<div class="bg-image" style="background-image: url('<?php echo esc_url(get_sub_field('information_box_image')); ?>');"></div>
-									<h3 class="info-box__headline"><?php echo esc_html(get_sub_field('information_box_headline'));?></h3>
+									<h2 class="info-box__headline"><?php echo esc_html(get_sub_field('information_box_headline'));?></h2>
 									<p class="info-box__description large-p"><?php echo esc_html(get_sub_field('information_box_text', $services_cat)); ?></p>
 								</div>
 							</article>

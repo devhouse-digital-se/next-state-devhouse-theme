@@ -10,7 +10,9 @@ $date = get_the_date( 'F d Y' );
 	<div class="entry-content__wrapper">
 		
 		<a href="<?php echo esc_url(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>">
-			<div class="entry-thumbnail bg-image" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url(get_the_id(), 'large')); ?>')"></div>
+			<div class="entry-thumbnail">
+				<?php echo get_the_post_thumbnail($services_cat, 'large'); ?>
+			</div>
 		</a>
 		
 		<div class="entry-meta"><?php echo $category; ?> • <?php echo $date; ?></div>

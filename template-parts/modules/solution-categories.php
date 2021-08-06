@@ -29,11 +29,15 @@ if ($services) : ?>
 									
 									<div class="col-12 d-md-flex justify-content-md-between align-items-md-center">
 									
-										<div class="bg-image" style="background-image: url(<?php echo esc_url(get_the_post_thumbnail_url($services_cat, 'large')); ?>);"></div>
+										<div class="img-container">
+											<?php echo get_the_post_thumbnail($services_cat, 'large'); ?>
+										</div>
 										
 										<div class="alternating-row__meta">
 											<p class="alternating-row__title"><?php echo esc_html(get_the_title($services_cat)); ?></p>
-											<h2 class="alternating-row__headline small-h2"><?php echo esc_html($headline);?></h2>
+											<a href="<?php echo esc_url(get_the_permalink($services_cat)); ?>" title="<?php echo esc_html(get_the_title($services_cat)); ?>">
+												<h2 class="alternating-row__headline"><?php echo esc_html($headline);?></h2>
+											</a>
 											<p class="alternating-row__description large-p"><?php echo esc_html(get_post_field('page_intro_text', $services_cat)); ?></p>
 											<div class="read-more">
 												<a href="<?php echo esc_url(get_the_permalink($services_cat)); ?>" title="<?php echo esc_html(get_the_title($services_cat)); ?>"><?php echo __('Learn more →', 'nextstate-theme'); ?></a>
