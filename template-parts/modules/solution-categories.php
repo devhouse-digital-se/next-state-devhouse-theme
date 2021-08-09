@@ -25,7 +25,7 @@ if ($services) : ?>
 								
 								?>
 							
-								<article class="row alternating-row">
+								<article class="row alternating-row" tabindex="0">
 									
 									<div class="col-12 d-md-flex justify-content-md-between align-items-md-center">
 									

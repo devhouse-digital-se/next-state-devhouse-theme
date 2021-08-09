@@ -15,9 +15,9 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<?php get_template_part( 'template-parts/modules/page-hero' ); ?>
 
-		<?php get_template_part( 'template-parts/modules/page-hero' ); ?>
+	<main id="primary" class="site-main">
 		
 		<?php 
 		
@@ -61,7 +61,7 @@ get_header();
 		<section class="container-fluid team team-intro__wrapper">
 			<div class="row">
 				
-				<div class="container m-100" tabindex="0">
+				<div class="container m-100">
 					
 					<?php if (get_field('team_information_headline') or get_field('team_information')) : ?>
 					<div class="row team-intro">
@@ -93,7 +93,7 @@ get_header();
 				    // Loop through rows.
 				    while( have_rows('information_rows_section') ) : the_row(); ?>
 				
-				        <article class="row alternating-row">
+				        <article class="row alternating-row" tabindex="0">
 								
 							<div class="col-12 d-md-flex justify-content-md-between align-items-md-center">
 							
@@ -144,7 +144,7 @@ get_header();
 					    // Loop through rows.
 					    while( have_rows('information_boxes') ) : the_row(); ?>
 					
-					        <article class="col-12 col-lg-4 info-box">
+					        <article class="col-12 col-lg-4 info-box" tabindex="0">
 					        	<div class="info-box__wrapper">
 					        		<div class="bg-image" style="background-image: url('<?php echo esc_url(get_sub_field('information_box_image')); ?>');"></div>
 									<h2 class="info-box__headline"><?php echo esc_html(get_sub_field('information_box_headline'));?></h2>

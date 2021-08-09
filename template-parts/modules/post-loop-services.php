@@ -36,7 +36,7 @@ if ($services_category) :
 		while ( $query->have_posts() ) : $query->the_post(); ?>
 		
 			<!-- service item -->
-			<div class="row service-item" id="<?php echo get_post_field( 'post_name', get_the_ID() ); ?>">
+			<div class="row service-item" id="<?php echo get_post_field( 'post_name', get_the_ID() ); ?>" tabindex="0">
 				<div class="container">
 					<div class="row service-item__wrapper flex-column-reverse flex-md-row">
 						

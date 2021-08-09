@@ -973,15 +973,8 @@ textarea {
 
 /*
 * Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
 * Browsers: last 4 version
 */
 
@@ -1066,7 +1059,9 @@ html {
     max-width: 1140px !important;
 }
 
-#primary {
+section.home-hero,
+section.page-hero,
+.page-template-page-contact #primary {
 	margin-top: -50px;
 }
 
@@ -1084,7 +1079,9 @@ html {
 		font-size: 16px;
 	}
 	
-	#primary {
+	section.home-hero,
+	section.page-hero,
+	.page-template-page-contact #primary {
 		margin-top: -86px;
 	}
 	
@@ -1682,7 +1679,6 @@ input[type="tel"]:focus {
 }
 
 header {
-	position: -webkit-sticky;
 	position: sticky;
 	z-index: 99999;
 	left: 0; top: 0;

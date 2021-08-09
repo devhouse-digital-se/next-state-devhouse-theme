@@ -92,7 +92,7 @@ get_header();
 						
 						<?php while( have_rows('locations') ) : the_row(); ?>
 					
-							<div class="col-12 col-md-6 location">
+							<div class="col-12 col-md-6 location" tabindex="0">
 								<?php get_template_part( 'template-parts/parts/content-location' ); ?>
 							</div>
 					        

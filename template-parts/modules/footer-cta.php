@@ -24,7 +24,7 @@ if ( get_field('display_cta_initial') ) :
 	endif;
 	
 	?>
-	<section class="container footer-cta">
+	<section class="container footer-cta" tabindex="0">
 		<div class="row">
 			
 			<div class="col-12">

@@ -18,7 +18,7 @@
 				<div class="col-12 col-md-8 m-auto">
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					
-						<div class="entry-content">
+						<div class="entry-content" tabindex="0">
 							<?php
 							the_content();
 					

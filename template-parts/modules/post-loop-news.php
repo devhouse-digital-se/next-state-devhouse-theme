@@ -36,7 +36,7 @@ if ($query->have_posts()) :
 	
 	while ( $query->have_posts() ) : $query->the_post();
 	
-		echo '<article id="post-' . get_the_ID() . '" class="col-12 col-md-6 col-lg-4">';
+		echo '<article id="post-' . get_the_ID() . '" class="col-12 col-md-6 col-lg-4" tabindex="0">';
 	
 		get_template_part( 'template-parts/parts/content-post');
 	
