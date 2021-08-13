@@ -2,15 +2,17 @@
 // Check rows exists.
 if( have_rows('our_partners') ): ?>
 	
+	<section class="container-fluid our-partners-headline m-50">
+		<div class="row">
+			<h3 class="section-headline"><?php echo esc_html(get_field('our_partners_headline')); ?></h3>
+		</div>
+	</section>
+	
 	<section class="container-fluid our-partners m-50">
 		<div class="row">
 	    
 	    	<div class="container">
-	    		
-	    		<div class="row">
-	    			<h3 class="section-headline"><?php echo esc_html(get_field('our_partners_headline')); ?></h3>
-	    		</div>
-	    		
+	    	
 	        	<div class="row">
 	        		<div class="slick partners col-md-8 m-auto">
 

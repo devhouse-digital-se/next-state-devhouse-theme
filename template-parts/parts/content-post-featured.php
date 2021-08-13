@@ -7,7 +7,7 @@ $date = get_the_date( 'F d Y', $featured_post );
 
 ?>
 
-<article id="post-<?php $featured_post; ?>" class="col-12 col-lg-10 m-auto">
+<article id="post-<?php $featured_post; ?>" class="col-12 col-lg-12 m-auto">
 	
 	<div class="article-wrapper d-md-flex align-items-center">
 		
@@ -20,7 +20,7 @@ $date = get_the_date( 'F d Y', $featured_post );
 			<div class="entry-meta"><?php echo $category; ?> • <?php echo $date; ?></div>
 			
 			<a style="text-decoration: none;" href="<?php echo esc_url(get_the_permalink($featured_post)); ?>" title="<?php echo esc_html(get_the_title($featured_post)); ?>">
-				<div class="entry-title"><h4><?php echo esc_html(get_the_title($featured_post)); ?></h4></div>
+				<div class="entry-title"><h2><?php echo esc_html(get_the_title($featured_post)); ?></h2></div>
 			</a>
 			
 			<div class="entry-content">

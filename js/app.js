@@ -1,5 +1,8 @@
 jQuery( document ).ready(function($) {
     
+    // On load...
+    headerBackground($);
+    
     // Slick - our partners
     $('.slick.partners').slick({
         slidesToShow: 3,
@@ -21,6 +24,7 @@ jQuery( document ).ready(function($) {
         ],
     });
     
+    
     // Smooth scroll #links
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
@@ -31,11 +35,10 @@ jQuery( document ).ready(function($) {
     });
     
     // stickyHeader
-    new Mhead( "#masthead", {
-        pin: 100
-    });
-    console.log(123);
-    
+    //new Mhead( "#masthead", {
+    //   pin: 100
+    //});
+
     // fade hero contents on scroll
     var heroContent = $('.page-hero .home-hero__content'),
     limit = 400;  /* scrolltop value when opacity should be 0 */
@@ -44,13 +47,17 @@ jQuery( document ).ready(function($) {
     limit = 400;  /* scrolltop value when opacity should be 0 */
 
     $(window).on('scroll', function() {
-       var st = $(this).scrollTop();
+        var st = $(this).scrollTop();
     
         /* avoid unnecessary call to jQuery function */
         if (st <= limit) {
             heroContent.css({ 'opacity' : (1 - st/limit) });
             homeHeroContent.css({ 'opacity' : (1 - st/limit) });
         }
+        
+        // apply or remove header background layer
+        headerBackground($);
+        
     });
     
 });
@@ -75,4 +82,16 @@ function toggleTeamInfo(button, event) {
     jQuery(button).prev().prev().slideToggle(400);
     jQuery(button).prev().slideToggle(400);
     
+}
+
+// Apply background class to header 
+function headerBackground($) {
+    var scroll = $(window).scrollTop();
+    
+    if (scroll >= 1) {
+        $("#masthead").addClass("faded-header");
+    }
+    else {
+        $("#masthead").removeClass("faded-header");
+    }
 }

@@ -13,6 +13,8 @@
  */
 
 get_header();
+$hero_bg_img = esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full'));
+
 ?>
 
 	<main id="primary" class="site-main">
@@ -20,11 +22,11 @@ get_header();
 		<!-- Contact hero -->
 		<section class="container-fluid contact-hero m-100">
 			
-			<div class="row contact-hero__background bg-image" style="background-image: url(<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full')); ?>);"></div>
+			<div class="row contact-hero__background bg-image" style="background-image: url(<?php echo $hero_bg_img; ?>);"></div>
 			
 			<div class="row">
 				
-				<div class="container">
+				<div class="container contact-hero__information__wrapper">
 					<div class="row">
 						
 						

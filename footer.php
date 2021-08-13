@@ -62,7 +62,7 @@
 						</div>
 						
 						<!-- footer column 3 -->
-						<div class="col-lg-3 footer-contact">
+						<div class="col-lg-4 footer-contact">
 							
 							<?php if (get_field('footer_phone_number', 'option')) : ?>
 								<a class="phone" href="tel:<?php echo esc_html(get_field('footer_phone_number', 'option')); ?>">
@@ -75,12 +75,11 @@
 									<p><?php echo esc_html(get_field('footer_e-mail', 'option')); ?></p>
 								</a>
 							<?php endif; ?>
-					
-						</div>
-						
-						<!-- footer column 4 -->
-						<div class="col-lg-1 footer-social">
+							
+							<div class="footer-social d-flex">
 							<?php
+
+								echo '<div class="follow-us__text large-p">Follow us</div>';
 
 								// Check rows exists.
 								if( have_rows('social_media_links', 'option') ):
@@ -105,6 +104,8 @@
 								
 							?>	
 						</div>
+					
+						</div>
 						
 						<div class="col-12 desktop-hidden">
 							
@@ -119,6 +120,47 @@
 				
 			</div>
 		</section>
+		
+		<?php
+
+		// Footer award section
+		if( have_rows('footer_logos_and_awards', 'option') ): ?>
+		
+		<!-- Awards section -->
+		<section class="container-fluid footer-content__awards m-50">
+			<div class="row">
+				
+				<div class="container">
+					
+					<div class="row d-flex">
+						
+					<?php
+					
+					// Total columns
+					$columns = '';
+					$total_items = count(get_field('footer_logos_and_awards', 'option'));
+					$columns = floor(12/$total_items);
+					
+				    // Loop through rows.
+				    while( have_rows('footer_logos_and_awards', 'option') ) : the_row();
+				
+				        // Load sub field value.
+				        $logo_url = get_sub_field('footer_award_logo');
+				        // Do something...
+				        
+				        echo '<div class="award bg-image contain col-' . $columns . '" style="background-image: url(' . $logo_url['url'] . ');"></div>';
+
+				    // End loop.
+				    endwhile; ?>
+
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		
+		<?php endif; ?>
+		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

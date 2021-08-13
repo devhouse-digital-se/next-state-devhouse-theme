@@ -12,10 +12,10 @@
 <section class="container-fluid page-content__wrapper">
 	<div class="row">
 		
-		<section class="container m-100">
+		<section class="container m-50">
 			<div class="row">
 				
-				<div class="col-12 col-md-8 m-auto">
+				<div class="col-12 col-md-8">
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					
 						<div class="entry-content" tabindex="0">

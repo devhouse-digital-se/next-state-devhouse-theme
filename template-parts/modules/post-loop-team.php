@@ -38,7 +38,7 @@ if ($team_categories) :
 		// post loop for each team member
 		if ($query->have_posts()) :
 			
-			echo '<div class="row team-category__row ' . $team_category->slug . ' d-md-inline-block" data-items="' . $query->found_posts . '">';
+			echo '<div class="row team-category__row ' . $team_category->slug . '" data-items="' . $query->found_posts . '">';
 			
 			while ( $query->have_posts() ) : $query->the_post();
 			

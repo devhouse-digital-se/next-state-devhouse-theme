@@ -36,10 +36,10 @@ get_header();
 			<div class="row">
 				
 				<div class="container m-100">
-					<div class="row">
+					<div class="row page-content__wrapper">
 						
-						<div class="col-12 col-md-8 m-auto <?php echo $column_size; ?>">
-							<h2 class="small-h2"><?php echo esc_html(get_field('company_information_headline')); ?></h2>
+						<div class="col-12 col-md-8 m-auto entry-content <?php echo $column_size; ?>">
+							<h2><?php echo esc_html(get_field('company_information_headline')); ?></h2>
 							<p class="large-p"><?php echo esc_html(get_field('company_information')); ?></p>
 						</div>
 						
@@ -97,12 +97,7 @@ get_header();
 								
 							<div class="col-12 d-md-flex justify-content-md-between align-items-md-center">
 							
-								<div class="img-container">
-									<img 
-										src="<?php echo esc_url(get_sub_field('information_row_image')['url']); ?>" 
-										alt="<?php echo get_sub_field('information_row_image')['alt']; ?>" 
-									/>
-								</div>
+								<div class="img-container bg-image" style="background-image: url(<?php echo esc_url(get_sub_field('information_row_image')['url']); ?>);"></div>
 								
 								<div class="alternating-row__meta">
 									<h2 class="alternating-row__headline small-h2"><?php echo esc_html(get_sub_field('information_row_headline'));?></h2>
