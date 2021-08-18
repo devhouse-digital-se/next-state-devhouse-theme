@@ -14,7 +14,7 @@ if( have_rows('our_partners') ): ?>
 	    	<div class="container">
 	    	
 	        	<div class="row">
-	        		<div class="slick partners col-md-8 m-auto">
+	        		<div class="slick partners col-md-10 m-auto">
 
 						<?php
 					    // Loop through rows.

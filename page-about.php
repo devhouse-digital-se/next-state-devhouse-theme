@@ -35,7 +35,7 @@ get_header();
 		<section class="container-fluid page-intro" tabindex="0">
 			<div class="row">
 				
-				<div class="container m-100">
+				<div class="container m-50">
 					<div class="row page-content__wrapper">
 						
 						<div class="col-12 col-md-8 m-auto entry-content <?php echo $column_size; ?>">
@@ -67,7 +67,7 @@ get_header();
 					<div class="row team-intro">
 						<div class="col-12 col-md-8 m-auto">
 							<h2 class="small-h2"><?php echo esc_html(get_field('team_information_headline')); ?></h2>
-							<p class="large-p"><?php echo esc_html(get_field('team_information')); ?></p>
+							<h3><?php echo esc_html(get_field('team_information')); ?></h3>
 						</div>
 					</div>
 					<?php endif; ?>
@@ -93,16 +93,16 @@ get_header();
 				    // Loop through rows.
 				    while( have_rows('information_rows_section') ) : the_row(); ?>
 				
-				        <article class="row alternating-row" tabindex="0">
+				        <article class="row alternating-row alt-shapes" tabindex="0">
 								
 							<div class="col-12 d-md-flex justify-content-md-between align-items-md-center">
-							
-								<div class="img-container bg-image" style="background-image: url(<?php echo esc_url(get_sub_field('information_row_image')['url']); ?>);"></div>
 								
 								<div class="alternating-row__meta">
 									<h2 class="alternating-row__headline small-h2"><?php echo esc_html(get_sub_field('information_row_headline'));?></h2>
-									<div class="alternating-row__description large-p"><?php echo get_sub_field('information_row_text'); ?></div>
+									<p class="alternating-row__description large-p"><?php echo get_sub_field('information_row_text'); ?></p>
 								</div>
+								
+								<div class="img-container bg-image" style="background-image: url(<?php echo esc_url(get_sub_field('information_row_image')['url']); ?>);"></div>
 							
 							</div>
 							
@@ -126,7 +126,7 @@ get_header();
 					
 					<?php if (get_field('information_boxes_section_headline')) : ?>
 					<div class="row team-intro">
-						<div class="col-12 col-md-8 m-auto">
+						<div class="col-12 col-md-12">
 							<h2 class="small-h2"><?php echo esc_html(get_field('information_boxes_section_headline')); ?></h2>
 						</div>
 					</div>

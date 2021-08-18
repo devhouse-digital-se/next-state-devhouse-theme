@@ -41,7 +41,7 @@ $hero_bg_img = esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full'));
 							<?php endif; ?>
 							
 							<?php if (get_the_content()) : ?>
-							<p class="contact-hero__text"><?php echo get_the_content(); ?></p>
+							<p class="large-p contact-hero__text"><?php echo get_the_content(); ?></p>
 							<?php endif; ?>
 							
 							<?php if ( have_rows('locations') ) : ?>

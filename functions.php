@@ -143,6 +143,9 @@ function next_state_scripts() {
 	wp_enqueue_style( 'next_state-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'next_state-style', 'rtl', 'replace' );
 	
+	// Enqueue jquery-3.6.0.min.js
+	wp_enqueue_script( 'jquery-js', get_template_directory_uri() . '/js/jquery-3.6.0.min.js' );
+	
 	// Enqueue BootStrap 4 Grid CSS
 	wp_enqueue_style( 'bootstrap-grid-style', get_template_directory_uri() . '/inc/css/bootstrap-grid.min.css' );
 

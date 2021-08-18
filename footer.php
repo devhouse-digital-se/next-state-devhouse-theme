@@ -132,28 +132,33 @@
 				
 				<div class="container">
 					
-					<div class="row d-flex">
+					<div class="col-md-10">
+					
+						<div class="row d-flex">
+							
+						<?php
 						
-					<?php
+						// Total columns
+						$columns = '';
+						$total_items = count(get_field('footer_logos_and_awards', 'option'));
+						$columns = floor(12/$total_items);
+						
+					    // Loop through rows.
+					    while( have_rows('footer_logos_and_awards', 'option') ) : the_row();
 					
-					// Total columns
-					$columns = '';
-					$total_items = count(get_field('footer_logos_and_awards', 'option'));
-					$columns = floor(12/$total_items);
+					        // Load sub field value.
+					        $logo_url = get_sub_field('footer_award_logo');
+					        // Do something...
+					        
+					        echo '<div class="award bg-image contain col-' . $columns . '" style="background-image: url(' . $logo_url['url'] . ');"></div>';
+	
+					    // End loop.
+					    endwhile; ?>
+	
+						</div>
 					
-				    // Loop through rows.
-				    while( have_rows('footer_logos_and_awards', 'option') ) : the_row();
-				
-				        // Load sub field value.
-				        $logo_url = get_sub_field('footer_award_logo');
-				        // Do something...
-				        
-				        echo '<div class="award bg-image contain col-' . $columns . '" style="background-image: url(' . $logo_url['url'] . ');"></div>';
-
-				    // End loop.
-				    endwhile; ?>
-
 					</div>
+					
 				</div>
 				
 			</div>

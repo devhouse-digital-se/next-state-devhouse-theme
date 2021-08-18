@@ -14,19 +14,32 @@
 
 get_header();
 ?>
-
+	
 	<?php get_template_part( 'template-parts/modules/page-hero' ); ?>
 
 	<main id="primary" class="site-main">
+		
+		<section class="container-fluid">
+			<div class="row">
+				
+				<article class="container m-100">
+					<div class="row">
+						
+						<div class="col-sm-12 col-md-8 m-auto single-content__wrapper">
+							
+							<?php
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-		endwhile; // End of the loop.
-		?>
+								echo get_the_content();
+								
+							?>
+							
+						</div>
+					
+					</div>
+				</article>
+				
+			</div>
+		</section>
 
 	</main><!-- #main -->
 

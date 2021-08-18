@@ -20,7 +20,7 @@ get_header();
 				<section class="container m-100">
 					<div class="row">
 						
-						<div class="col-sm-12 col-md-8 m-auto">
+						<div class="col-sm-12 col-md-8 m-auto single-content__wrapper">
 							
 							<?php
 

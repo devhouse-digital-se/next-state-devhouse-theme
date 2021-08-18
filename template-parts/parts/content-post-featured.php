@@ -9,7 +9,7 @@ $date = get_the_date( 'F d Y', $featured_post );
 
 <article id="post-<?php $featured_post; ?>" class="col-12 col-lg-12 m-auto">
 	
-	<div class="article-wrapper d-md-flex align-items-center">
+	<div class="article-wrapper d-md-flex align-items-center justify-content-md-between">
 		
 		<a href="<?php echo esc_url(get_the_permalink($featured_post)); ?>" title="<?php echo esc_html(get_the_title($featured_post)); ?>">
 			<div class="entry-thumbnail bg-image" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($featured_post, 'large')); ?>')"></div>

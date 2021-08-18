@@ -15,6 +15,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="ahrefs-site-verification" content="9349a54deda410e50c76ae1a002aa0791ab9b3fa7fc1650c3d7d7c948845b26d">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link href="/wp-content/themes/next_state/inc/css/mhead.css" rel="stylesheet" />
 

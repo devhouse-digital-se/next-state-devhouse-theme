@@ -4,7 +4,7 @@
 	    <div class="container">
 	        <div class="row">
 	        
-	            <div class="col home-hero__content d-flex align-items-center align-items-md-end">
+	            <div class="col home-hero__content d-flex flex-column justify-content-end align-items-center align-items-md-end">
 	            	
 	            	<?php // get the page title
             		$page_title = get_the_title();

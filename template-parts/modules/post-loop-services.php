@@ -70,7 +70,7 @@ if ($services_category) :
 						
 						<?php if (get_the_post_thumbnail_url(get_the_ID(), 'large')) : ?>
 						<div class="col-12 col-md-6">
-							<div class="bg-image contain" style="background-image: url(<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'large')); ?>);"></div>
+							<div class="bg-image" style="background-image: url(<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'large')); ?>);"></div>
 						</div>
 						<?php endif; ?>
 						

@@ -9,10 +9,10 @@
 
 get_header();
 ?>
+	
+	<?php get_template_part( 'template-parts/modules/post-hero' ); ?>
 
 	<main id="primary" class="site-main">
-		
-		<?php get_template_part( 'template-parts/modules/post-hero' ); ?>
 		
 		<section class="container-fluid">
 			<div class="row">
@@ -20,7 +20,7 @@ get_header();
 				<article class="container m-100">
 					<div class="row">
 						
-						<div class="col-sm-12 col-md-8 m-auto">
+						<div class="col-sm-12 col-md-8 m-auto single-content__wrapper">
 							
 							<?php
 

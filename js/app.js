@@ -1,6 +1,6 @@
 jQuery( document ).ready(function($) {
     
-    // On load...
+    // On load, apply header background if scroll position is not at top of page.
     headerBackground($);
     
     // Slick - our partners
@@ -18,10 +18,15 @@ jQuery( document ).ready(function($) {
               breakpoint: 992,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToScroll: 1
               }
             },
         ],
+    });
+    
+    // Event listener for team category filtering
+    $('.team-grid__filter-item').on('click', function() {
+        filterTeamCategory(this, $);
     });
     
     
@@ -66,21 +71,50 @@ jQuery( document ).ready(function($) {
 function toggleTeamInfo(button, event) {
     event.preventDefault();
     
-    // reset other opened item
-    let activeItem = jQuery('.team-member__information__wrapper .active');
+    let currentItem = jQuery(button);
     
-    if (activeItem.length != 0 && jQuery(activeItem).attr('data-team-member') != jQuery(button).attr('data-team-member')) {
-        jQuery(activeItem).toggleClass('active');
-        jQuery(activeItem).prev().prev().slideToggle(400);
-        jQuery(activeItem).prev().slideToggle(400);
+    // add temporary class to selected item
+    jQuery(currentItem).addClass('temp');
+    
+    jQuery('.team-grid article .team-member__information__wrapper a').each(function() {
+        
+        // if selected item, display extended bio info
+        if ( jQuery(this).hasClass('temp') ) {
+            
+            jQuery(this).prev().prev().slideToggle(400);
+            jQuery(this).prev().slideToggle(400);
+            jQuery(this).toggleClass('active');
+            switchTeamButtonText(currentItem);
+            
+        // and reset the other items    
+        } else {
+            
+            jQuery(this).prev().prev().slideUp(400);
+            jQuery(this).prev().slideDown(400);
+            jQuery(this).removeClass('active');
+            switchTeamButtonText(this);
+            
+        }
+
+    });
+    
+    // remove temporary class to selected item
+    jQuery(currentItem).removeClass('temp');
+    
+}
+
+// Swap button text for team member dropdown trigger
+function switchTeamButtonText(teammemberButton) {
+    
+    var newText;
+    
+    if ( jQuery(teammemberButton).hasClass('active') ) {
+        newText = jQuery(teammemberButton).attr('data-opened');
+    } else {
+        newText = jQuery(teammemberButton).attr('data-closed');
     }
     
-    // toggle active class on button
-    jQuery(button).toggleClass('active');
-
-    // toggle the text sections
-    jQuery(button).prev().prev().slideToggle(400);
-    jQuery(button).prev().slideToggle(400);
+    jQuery(teammemberButton).find('p').html(newText);
     
 }
 
@@ -94,4 +128,40 @@ function headerBackground($) {
     else {
         $("#masthead").removeClass("faded-header");
     }
+}
+
+// Team category filtering
+function filterTeamCategory(selectedCategory, $) {
+    
+    let selectedCat = $(selectedCategory).attr('data-value');
+    
+    // Check only the selected button
+    $('.team-grid__filter-item').each(function() {
+        let buttonCat = $(this).attr('data-value');
+        
+        if (buttonCat == selectedCat) {
+            $(this).addClass('checked');
+        } else {
+            $(this).removeClass('checked');
+        }
+        
+    });
+    
+    // Filter the categories based on selection
+    $('.team-grid').each(function() {
+        let sectionCat = $(this).attr('data-value');
+        
+        if (sectionCat == selectedCat) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+        
+        // All reset
+        if (selectedCat == 'all') {
+            $(this).show();
+        }
+        
+    });
+
 }

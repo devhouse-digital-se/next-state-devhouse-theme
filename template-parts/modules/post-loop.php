@@ -19,6 +19,9 @@ if ($posts_to_display && $posts_to_display != 0) :
 		echo '<section class="container-fluid m-100 latest-posts">';
 		echo '<section class="row">';
 		echo '<section class="container">';
+		
+		echo '<h3 class="section-headline">News</h3>';
+		
 		echo '<div class="post-grid row">';
 		
 		while ( $query->have_posts() ) : $query->the_post();
